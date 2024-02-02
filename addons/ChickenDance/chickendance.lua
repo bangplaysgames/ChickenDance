@@ -13,7 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 addon.name = 'ChickenDance';
 addon.author = 'Banggugyangu';
 addon.desc = "Shuffle your mounts!!";
-addon.version = '0.1';
+addon.version = '0.1.1';
 
 local settings = require('settings');
 local imgui = require('imgui');
@@ -112,7 +112,6 @@ ashita.events.register('command', 'command_cb', function(e)
         local mountName = MountEnum[mountIndex];
         if(mountName ~= nil)then
             local mountStr = '/mount ' .. mountName;
-            print(chat.message(tostring(mountStr)));
             AshitaCore:GetChatManager():QueueCommand(-1, mountStr);
         end
     end
