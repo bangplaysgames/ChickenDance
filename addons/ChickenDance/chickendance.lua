@@ -111,7 +111,7 @@ ashita.events.register('command', 'command_cb', function(e)
         local mountIndex = possibleMounts[rand];
         local mountName = MountEnum[mountIndex];
         if(mountName ~= nil)then
-            local mountStr = '/mount ' .. mountName;
+            local mountStr = '/mount "' .. mountName .. '"';
             AshitaCore:GetChatManager():QueueCommand(-1, mountStr);
         end
     end
